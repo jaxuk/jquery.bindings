@@ -572,7 +572,8 @@ function bindings_findpipe(current, name, value) {
     var beg = name.lastIndexOf('[');
     var pipe;
     var index = -1;
-
+    if (current == null)
+        return;
     if (beg !== -1) {
 
         index = parseInt(name.substring(beg + 1).replace(/\]\[/g, ''));
